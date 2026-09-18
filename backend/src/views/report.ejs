@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireHub AI - System Executive Report</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0b0f19; color: #e2e8f0; padding: 2rem 1rem; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #4f46e5, #7c3aed); border-radius: 1rem; padding: 2.5rem; margin-bottom: 2rem; box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2); }
+    .header h1 { font-size: 2.2rem; font-weight: 800; }
+    .header p { opacity: 0.85; margin-top: 0.5rem; font-size: 0.95rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-bottom: 2rem; }
+    .card { background: #151d30; border: 1px solid #24304f; border-radius: 0.75rem; padding: 1.5rem; text-align: center; }
+    .card .val { font-size: 2.2rem; font-weight: 800; color: #818cf8; }
+    .card .lbl { font-size: 0.85rem; color: #94a3b8; text-transform: uppercase; margin-top: 0.35rem; }
+    .table-container { background: #151d30; border: 1px solid #24304f; border-radius: 0.75rem; padding: 1.5rem; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th { padding: 0.85rem; color: #818cf8; border-bottom: 1px solid #24304f; font-size: 0.85rem; text-transform: uppercase; }
+    td { padding: 0.85rem; border-bottom: 1px solid #1a233a; font-size: 0.95rem; }
+    .badge { padding: 0.25rem 0.6rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+    .badge-green { background: #064e3b; color: #6ee7b7; }
+    .badge-blue { background: #1e3a8a; color: #93c5fd; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>HireHub AI &mdash; Executive Platform Report</h1>
+      <p>Server-side rendered via Express.js &amp; EJS Engine &bull; Generated: <%= generatedAt %></p>
+    </div>
+
+    <div class="grid">
+      <div class="card"><div class="val"><%= totalUsers %></div><div class="lbl">Total Users</div></div>
+      <div class="card"><div class="val"><%= candidates %></div><div class="lbl">Candidates</div></div>
+      <div class="card"><div class="val"><%= recruiters %></div><div class="lbl">Recruiters</div></div>
+      <div class="card"><div class="val"><%= totalJobs %></div><div class="lbl">Total Jobs</div></div>
+      <div class="card"><div class="val"><%= activeJobs %></div><div class="lbl">Active Listings</div></div>
+      <div class="card"><div class="val"><%= totalApplications %></div><div class="lbl">Applications</div></div>
+      <div class="card"><div class="val"><%= interviews %></div><div class="lbl">Interviews</div></div>
+    </div>
+
+    <div class="table-container">
+      <h2 style="margin-bottom: 1rem; color: #cbd5e1; font-size: 1.2rem;">Core Platform Metrics</h2>
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Current Total</th><th>Operational Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Candidate Profiles</td><td><%= candidates %></td><td><span class="badge badge-green">Healthy</span></td></tr>
+          <tr><td>Recruiter Organizations</td><td><%= recruiters %></td><td><span class="badge badge-blue">Active</span></td></tr>
+          <tr><td>Verified Job Positions</td><td><%= totalJobs %></td><td><span class="badge badge-green">Listed</span></td></tr>
+          <tr><td>Candidate Applications</td><td><%= totalApplications %></td><td><span class="badge badge-blue">Processing</span></td></tr>
+          <tr><td>Conducted Interviews</td><td><%= interviews %></td><td><span class="badge badge-green">Scheduled</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
