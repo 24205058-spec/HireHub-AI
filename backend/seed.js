@@ -64,8 +64,9 @@ const seed = async () => {
       recruiterProfiles.push(profile);
     }
 
-    // 5 Candidates
+    // 6 Candidates
     const candidatesData = [
+      { name: 'Lathishri', email: 'lathishri@hirehub.ai', headline: 'AI & Full Stack Engineer | React, Node.js, Python', bio: 'Motivated engineer specializing in AI intelligence, web architecture, and full-stack software development.', location: 'Chennai, India', skills: ['React', 'Node.js', 'MongoDB', 'Python', 'JavaScript', 'TypeScript', 'Docker', 'REST APIs', 'Git'], exp: 3, role: 'Full Stack Developer' },
       { name: 'Alex Johnson', email: 'alex@candidate.com', headline: 'Full Stack Engineer | React, Node.js, MongoDB', bio: 'Full-stack builder with 3+ years delivering scalable SaaS apps and modern UI architectures.', location: 'New York, NY', skills: ['React', 'Node.js', 'MongoDB', 'JavaScript', 'TypeScript', 'Docker', 'Git', 'REST APIs', 'Express.js'], exp: 3, role: 'Full Stack Developer' },
       { name: 'Priya Patel', email: 'priya@candidate.com', headline: 'Frontend Engineer & UI Architect', bio: 'Passionate about design systems, accessible web interfaces, and high-performance React applications.', location: 'Remote', skills: ['React', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3', 'Redux', 'Git'], exp: 2, role: 'Frontend Developer' },
       { name: 'Marcus Williams', email: 'marcus@candidate.com', headline: 'Data Scientist & Machine Learning Specialist', bio: 'Applied ML engineer with expertise in predictive modeling, NLP pipelines, and data analytics.', location: 'Austin, TX', skills: ['Python', 'Machine Learning', 'TensorFlow', 'Pandas', 'NumPy', 'SQL', 'Scikit-learn', 'Docker'], exp: 4, role: 'Data Scientist' },
