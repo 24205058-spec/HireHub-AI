@@ -49,7 +49,7 @@ const Dashboard = () => {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <div className="card-dark border-indigo-500/20">
           <span className="text-xs text-slate-400 font-medium">Profile Completeness</span>
-          <p className="text-2xl font-black text-indigo-400 mt-1">{profile?.profileCompletion || 85}%</p>
+          <p className="text-2xl font-black text-indigo-400 mt-1">{profile?.profileCompletion || 0}%</p>
         </div>
         <div className="card-dark border-emerald-500/20">
           <span className="text-xs text-slate-400 font-medium">Resume AI Score</span>

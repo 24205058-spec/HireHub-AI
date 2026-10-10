@@ -15,7 +15,12 @@ exports.register = asyncHandler(async (req, res) => {
   const user = await User.create({ name, email, password, role: role || 'candidate' });
 
   if (user.role === 'candidate') {
-    await CandidateProfile.create({ userId: user._id, currentRole: 'Job Seeker' });
+    await CandidateProfile.create({
+      userId: user._id,
+      currentRole: '',
+      profileCompletion: 0,
+      resumeScore: 0
+    });
   } else if (user.role === 'recruiter') {
     await RecruiterProfile.create({ userId: user._id, companyName: companyName || 'Hiring Enterprise' });
   }
