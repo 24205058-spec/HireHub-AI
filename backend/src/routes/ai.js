@@ -15,6 +15,9 @@ const Job = require('../models/Job');
 router.post('/resume-analyze', protect, authorize('candidate'), asyncHandler(async (req, res) => {
   const profile = await CandidateProfile.findOne({ userId: req.user._id });
   if (!profile) return res.status(404).json({ success: false, message: 'Candidate profile record missing.' });
+  if (!profile.resumeUrl && (!profile.skills || profile.skills.length === 0)) {
+    return res.status(400).json({ success: false, message: 'Please upload your resume document in your profile before running analysis.' });
+  }
   const result = resumeAnalyzer.analyzeResume(profile);
   profile.resumeScore = result.overallScore;
   await profile.save();

@@ -53,7 +53,7 @@ const Dashboard = () => {
         </div>
         <div className="card-dark border-emerald-500/20">
           <span className="text-xs text-slate-400 font-medium">Resume AI Score</span>
-          <p className="text-2xl font-black text-emerald-400 mt-1">{profile?.resumeScore || 78}/100</p>
+          <p className="text-2xl font-black text-emerald-400 mt-1">{profile?.resumeScore || 0}/100</p>
         </div>
         <div className="card-dark border-purple-500/20">
           <span className="text-xs text-slate-400 font-medium">Active Applications</span>
